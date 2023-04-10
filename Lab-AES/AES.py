@@ -1,2 +1,6 @@
 import math
-print("Hello World")
+
+# Block Size 128 Bits
+# Key Size 129 Bits
+# Key Genrator Class
+# Encryption Class

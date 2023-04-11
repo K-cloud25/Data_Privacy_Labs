@@ -20,3 +20,12 @@ class KeyGeneration:
 
 obj = KeyGeneration()
 print(obj.retKeys())
+
+pt = "Thats my Kung Fu".encode('utf-8')
+sarray = []
+
+for i in range(0,len(pt)):
+               sarray.append(pt[i:i+1].hex())
+print(sarray)
+
+

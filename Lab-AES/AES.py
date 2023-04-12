@@ -211,7 +211,18 @@ class SimplifiedAES(object):
         return self.state_to_int(state)
     
 
+obj = SimplifiedAES(0b0100101011110101)
+encryptedArray = []
+test_str = b"THIS IS A SCRIPT MESSAGE"
+for i in range(0,len(test_str)):
+    encryptedArray.append(obj.encrypt(int(bin(test_str[i])[2:],2)))
 
-obj = SimplifiedAES(bytes("co0cvwn0UTLaxh3b","utf-8"))
+decryptedArray = []
+for i in range(0,len(encryptedArray)):
+    decryptedArray.append(obj.decrypt(encryptedArray[i]))
 
-print(obj.encrypt("HELLO"))
+string_byte = b""
+for i in decryptedArray:
+    string_byte += i.to_bytes(2,'big')
+
+print(string_byte.decode())

@@ -65,11 +65,6 @@ class SimplifiedAES(object):
         )
 
     def gf_mult(self, a, b):
-        """Galois field multiplication of a and b in GF(2^4) / x^4 + x + 1
-        :param a: First number
-        :param b: Second number
-        :returns: Multiplication of both under GF(2^4)
-        """
         # Initialise
         product = 0
 
